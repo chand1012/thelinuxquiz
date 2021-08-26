@@ -30,6 +30,7 @@ User's experience with the linux environment: Never once used it -> I know nothi
 Overall ease of use: Grandma -> god
 Privacy: Facebook -> black Box
 Security: I don't use passwords -> 4096 character passwords or nothing
+Software Currency: I use windows XP -> I constantly check for updates
 Software acquisition: Built in store -> build+compile from source
 Ease of customization: LFS -> iphone
 Ease of installation: 3 clicks -> I compiled my entire OS from source

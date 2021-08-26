@@ -2,8 +2,6 @@ import React from "react";
 import { Button, Fieldset, Grid, Text } from "@geist-ui/react";
 import Question from "./components/Question";
 import BoolQuestion from "./components/BoolQuestion";
-//import QuestionCheck from "./components/QuestionCheck";
-//import Checkbox from "@geist-ui/react/dist/checkbox/checkbox";
 
 const HomeQuiz = () => {
   const [quizState, setQuizState] = React.useState({
@@ -56,12 +54,12 @@ const HomeQuiz = () => {
     });
   };
 
-  /*const handleGamesChange = (value) => {
+  const handleGamingChange = (value) => {
     setQuizState({
       ...quizState,
       games: value,
     });
-  };*/
+  };
 
   return (
     <Fieldset label="home">
@@ -97,9 +95,9 @@ const HomeQuiz = () => {
             </Question>
           </Grid>
           <Grid>
-          <BoolQuestion>
-            Do you use your computer for gaming?
-          </BoolQuestion>
+            <BoolQuestion onChange={handleGamingChange}>
+              Do you use your computer for gaming?
+            </BoolQuestion>
           </Grid>
         </Grid.Container>
       </Fieldset.Subtitle>

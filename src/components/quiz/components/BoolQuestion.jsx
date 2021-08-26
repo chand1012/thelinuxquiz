@@ -7,9 +7,9 @@ const BoolQuestion = (props) => (
       <h4>{props.children}</h4>
     </Text>
     <Divider y={0} />
-    <Radio.Group>
-        <Radio value="True">Yes</Radio>
-        <Radio value="False">No</Radio>
+    <Radio.Group onChange={props.onChange}>
+      <Radio value={true}>Yes</Radio>
+      <Radio value={false}>No</Radio>
     </Radio.Group>
   </Card>
 );

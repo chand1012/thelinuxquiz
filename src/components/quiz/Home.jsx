@@ -13,6 +13,8 @@ const HomeQuiz = () => {
     community: 5,
     windows: 5,
     games: false,
+    customizability: 5,
+    install: 5,
   });
 
   const submit = () => {
@@ -61,6 +63,27 @@ const HomeQuiz = () => {
     });
   };
 
+  const handleCustomizeChange = (value) => {
+    setQuizState({
+      ...quizState,
+      customizability: value,
+    });
+  };
+
+  const handleInstallChange = (value) => {
+    setQuizState({
+      ...quizState,
+      install: value,
+    });
+  };
+
+  const handleCommunityChange = (value) => {
+    setQuizState({
+      ...quizState,
+      community: value,
+    });
+  };
+
   return (
     <Fieldset label="home">
       <Fieldset.Title>Home Use</Fieldset.Title>
@@ -98,6 +121,21 @@ const HomeQuiz = () => {
             <BoolQuestion onChange={handleGamingChange}>
               Do you use your computer for gaming?
             </BoolQuestion>
+          </Grid>
+          <Grid>
+            <Question onChange={handleCustomizeChange}>
+              How important is customizability to you?
+            </Question>
+          </Grid>
+          <Grid>
+            <Question onChange={handleInstallChange}>
+              How important is ease of installation to you?
+            </Question>
+          </Grid>
+          <Grid>
+            <Question onChange={handleCommunityChange}>
+              How important is a large community of similar users to you?
+            </Question>
           </Grid>
         </Grid.Container>
       </Fieldset.Subtitle>

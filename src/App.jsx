@@ -12,7 +12,7 @@ function App() {
   return (
     <GeistProvider themeType={themeType}>
       <CssBaseline />
-      <NavBar themeSwitcher={switchThemes} />
+      <NavBar themeSwitcher={switchThemes} themeType={themeType} />
       <Grid.Container gap={2} justify="center">
         <Grid>
           <Quiz />

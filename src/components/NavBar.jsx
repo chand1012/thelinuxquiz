@@ -1,22 +1,27 @@
 import React from "react";
-import { Button, Card, Divider, Grid } from "@geist-ui/react";
+import { Button, Card, Divider, Link } from "@geist-ui/react";
+import { Moon, Sun } from "@geist-ui/react-icons";
 
-// This will be the top navbar
-// needs finished
+// this will need some work
 
-const NavBar = ({ themeSwitcher }) => (
-  //   Grid container
+const NavBar = ({ themeSwitcher, themeType }) => (
   <header>
-    <Grid.Container height="100px" justify="center" gap={2}>
-      <Grid>
-        <Card>
-          <h4> TheLinuxQuiz </h4>
+    <div style={{ display: "flex" }}>
+      <Link>
+        <Card style={{ margin: 10 }}>
+          <h4> The Linux Quiz </h4>
         </Card>
-      </Grid>
-      <Grid>
-        <Button onClick={themeSwitcher}>Theme</Button>
-      </Grid>
-    </Grid.Container>
+      </Link>
+      <Button
+        auto
+        style={{ marginRight: 10, marginLeft: "auto", marginTop: 16 }}
+        onClick={themeSwitcher}
+      >
+        <div style={{ marginTop: 6 }}>
+          {themeType === "light" ? <Moon /> : <Sun />}
+        </div>
+      </Button>
+    </div>
     <Divider />
   </header>
 );

@@ -8,7 +8,7 @@ const NavBar = ({ themeSwitcher, themeType }) => (
   <header>
     <div style={{ display: "flex" }}>
       <Link>
-        <Card style={{ margin: 10 }}>
+        <Card hoverable style={{ margin: 10 }}>
           <h4> The Linux Quiz </h4>
         </Card>
       </Link>

@@ -4,10 +4,14 @@ import Question from "./components/Question";
 
 const HomeQuiz = () => {
   const [quizState, setQuizState] = React.useState({
-    usability: 5,
+    ux: 5,
     security: 5,
     privacy: 5,
     experience: 5,
+    stability: 5,
+    community: 5,
+    windows: 5,
+    games: false,
   });
 
   const submit = () => {
@@ -21,10 +25,10 @@ const HomeQuiz = () => {
     });
   };
 
-  const handleUsabilityChange = (value) => {
+  const handleUXChange = (value) => {
     setQuizState({
       ...quizState,
-      usability: value,
+      ux: value,
     });
   };
 
@@ -42,6 +46,13 @@ const HomeQuiz = () => {
     });
   };
 
+  const handleStabilityChange = (value) => {
+    setQuizState({
+      ...quizState,
+      stability: value,
+    });
+  };
+
   return (
     <Fieldset label="home">
       <Fieldset.Title>Home Use</Fieldset.Title>
@@ -56,8 +67,8 @@ const HomeQuiz = () => {
             </Question>
           </Grid>
           <Grid>
-            <Question onChange={handleUsabilityChange}>
-              How important is usability to you?
+            <Question onChange={handleUXChange}>
+              How important is user experience to you?
             </Question>
           </Grid>
           <Grid>
@@ -68,6 +79,11 @@ const HomeQuiz = () => {
           <Grid>
             <Question onChange={handlePrivacyChange}>
               How important is privacy to you?
+            </Question>
+          </Grid>
+          <Grid>
+            <Question onChange={handleStabilityChange}>
+              How important is stability to you?
             </Question>
           </Grid>
         </Grid.Container>

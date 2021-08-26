@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## First Steps
+
+```bash
+git clone https://github.com/chand1012/thelinuxquiz.git
+cd thelinuxquiz
+yarn
+```
+
 ## Available Scripts
 
 In the project directory, you can run:

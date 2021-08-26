@@ -1,12 +1,12 @@
 import React from "react";
-import { Card, Text, Slider, Spacer } from "@geist-ui/react";
+import { Card, Divider, Text, Slider } from "@geist-ui/react";
 
 const Question = (props) => (
   <Card width="100%">
     <Text>
       <h4>{props.children}</h4>
     </Text>
-    <Spacer />
+    <Divider y={0} />
     <Slider
       onChange={props.onChange}
       min={1}

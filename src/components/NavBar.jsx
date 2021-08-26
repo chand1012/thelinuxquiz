@@ -1,20 +1,23 @@
 import React from "react";
-import { Grid } from "@geist-ui/react";
-import { Card } from "@geist-ui/react";
+import { Button, Card, Divider, Grid } from "@geist-ui/react";
 
-const NavBar = () => (
+// This will be the top navbar
+
+const NavBar = ({ themeSwitcher }) => (
   //   Grid container
-  <Grid.Container gap={2} justify="center" height="100px">
-    <Grid xs={6}>
-      <Card shadow width="100%" />
-    </Grid>
-    <Grid xs={6}>
-      <Card shadow width="100%" />
-    </Grid>
-    <Grid xs={6}>
-      <Card shadow width="100%" />
-    </Grid>
-  </Grid.Container>
+  <header>
+    <Grid.Container justify="center" gap={2}>
+      <Grid>
+        <Card>
+          <h1> TheLinuxQuiz </h1>
+        </Card>
+        <Card>
+          <Button onClick={themeSwitcher}>Theme</Button>
+        </Card>
+      </Grid>
+    </Grid.Container>
+    <Divider />
+  </header>
 );
 
 export default NavBar;

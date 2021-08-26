@@ -1,18 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import { GeistProvider, CssBaseline } from '@geist-ui/react';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+
+// The theme will be switchable later
 
 ReactDOM.render(
   <React.StrictMode>
-    <GeistProvider>
-      <CssBaseline />
-      <App />
-    </GeistProvider>
+    <App></App>
   </React.StrictMode>,
-  document.getElementById('root'),
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

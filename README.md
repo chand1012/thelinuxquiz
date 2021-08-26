@@ -10,6 +10,10 @@ cd thelinuxquiz
 yarn
 ```
 
+## Frameworks
+
+This project is using the [Geist UI Framework](https://react.geist-ui.dev/en-us) to aid in development. This is a UI framework that takes most of the work out of CSS and allows us to write the app without having to style much if anything at all.
+
 ## Available Scripts
 
 In the project directory, you can run:

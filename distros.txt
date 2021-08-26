@@ -1,0 +1,41 @@
+Ubuntu 		-
+Pop! OS 	good enough
+Mint		-
+Elementary	-
+Neon		-
+Debian		-
+Arch		-
+Gentoo		-
+OpenSUSE	-
+Rocky Linux	-
+Fedora		-
+Kali		-
+Quebes OS	-
+redHat		-
+Manjaro		-
+Arctix		
+Linux from Scratch
+Zorin		-
+Solus		-
+Gardua
+EndeavourOS	-
+MX Linux	-
+Slackware	-
+NixOS		-
+
+
+
+Categories:
+User's experience with the linux environment: Never once used it -> I know nothing *but* linux
+Overall ease of use: Grandma -> god
+Privacy: Facebook -> black Box
+Security: I don't use passwords -> 4096 character passwords or nothing
+Software acquisition: Built in store -> build+compile from source
+Ease of customization: LFS -> iphone
+Ease of installation: 3 clicks -> I compiled my entire OS from source
+
+Use Case: Home/Office/Server
+Do you hate SystemD? Yes/No/WTF is SystemD?
+
+
+anon database? -> only answers, no tracking info at all.

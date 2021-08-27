@@ -86,5 +86,53 @@ export const elementary = {
   url: "https://elementary.io/",
 };
 
-// opensuse
-// linuxFromScratch
+export const zorin = {
+  security: 8,
+  stability: 8,
+  community: 6,
+  experience: 1,
+  privacy: 6,
+  ux: 8,
+  games: true,
+  windows: 6,
+  url: "https://zorin.com/os/",
+};
+
+export const linuxFromScratch = {
+  security: 8,
+  stability: 5,
+  community: 6,
+  experience: 10,
+  privacy: 9,
+  ux: 7,
+  games: false, // this may change
+  windows: 1,
+  url: "https://www.linuxfromscratch.org/",
+};
+
+export const opensuse = {
+  security: 8,
+  stability: 8,
+  community: 7,
+  experience: 3,
+  privacy: 8,
+  ux: 6,
+  games: true,
+  windows: 1,
+  url: "https://www.opensuse.org/",
+};
+
+const linuxDistros = {
+  ubuntu,
+  debian,
+  fedora,
+  arch,
+  popOS,
+  linuxMint,
+  elementary,
+  zorin,
+  linuxFromScratch,
+  opensuse,
+};
+
+export default linuxDistros;

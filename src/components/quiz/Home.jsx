@@ -78,7 +78,7 @@ const HomeQuiz = () => {
         <Text>
           <h5>All scales are from 1 to 10.</h5>
         </Text>
-        <Grid.Container gap={2}>
+        <Grid.Container width="50rem" direction="column" gap={2}>
           <Grid>
             <Question onChange={handleWindowsChange}>
               How experienced are you with Microsoft&#39;s Windows?

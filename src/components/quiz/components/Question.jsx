@@ -12,7 +12,7 @@ const Question = (props) => (
       min={1}
       max={10}
       step={1}
-      initialValue={5}
+      initialValue={1}
     />
   </Card>
 );

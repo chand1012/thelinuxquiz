@@ -1,17 +1,12 @@
 import React from "react";
 import { Button, Fieldset, Grid, Text } from "@geist-ui/react";
 import Question from "./components/Question";
-import BoolQuestion from "./components/BoolQuestion";
-
 const ServerQuiz = () => {
   const [windows, setWindows] = React.useState(1);
   const [experience, setExperience] = React.useState(1);
-  const [ux, setUx] = React.useState(1);
   const [security, setSecurity] = React.useState(1);
   const [privacy, setPrivacy] = React.useState(1);
   const [stability, setStability] = React.useState(1);
-  const [gaming, setGaming] = React.useState(false);
-  const [customize, setCustomize] = React.useState(1);
   const [install, setInstall] = React.useState(1);
   const [community, setCommunity] = React.useState(1);
 
@@ -19,12 +14,9 @@ const ServerQuiz = () => {
     const quizState = {
       windows,
       experience,
-      ux,
       security,
       privacy,
       stability,
-      gaming,
-      customize,
       install,
       community,
     };
@@ -39,10 +31,6 @@ const ServerQuiz = () => {
     setExperience(value);
   };
 
-  const handleUXChange = (value) => {
-    setUx(value);
-  };
-
   const handleSecurityChange = (value) => {
     setSecurity(value);
   };
@@ -53,14 +41,6 @@ const ServerQuiz = () => {
 
   const handleStabilityChange = (value) => {
     setStability(value);
-  };
-
-  const handleGamingChange = (value) => {
-    setGaming(value);
-  };
-
-  const handleCustomizeChange = (value) => {
-    setCustomize(value);
   };
 
   const handleInstallChange = (value) => {
@@ -90,11 +70,6 @@ const ServerQuiz = () => {
             </Question>
           </Grid>
           <Grid>
-            <Question onChange={handleUXChange}>
-              How important is user experience to you?
-            </Question>
-          </Grid>
-          <Grid>
             <Question onChange={handleSecurityChange}>
               How important is security to you?
             </Question>
@@ -110,11 +85,6 @@ const ServerQuiz = () => {
             </Question>
           </Grid>
           <Grid>
-            <Question onChange={handleCustomizeChange}>
-              How important is customizability to you?
-            </Question>
-          </Grid>
-          <Grid>
             <Question onChange={handleInstallChange}>
               How important is ease of installation to you?
             </Question>
@@ -123,11 +93,6 @@ const ServerQuiz = () => {
             <Question onChange={handleCommunityChange}>
               How important is a large community of similar users to you?
             </Question>
-          </Grid>
-          <Grid>
-            <BoolQuestion onChange={handleGamingChange}>
-              Do you use your computer for gaming?
-            </BoolQuestion>
           </Grid>
         </Grid.Container>
       </Fieldset.Subtitle>

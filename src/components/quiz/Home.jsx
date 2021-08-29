@@ -3,7 +3,7 @@ import { Button, Fieldset, Grid, Text } from "@geist-ui/react";
 import Question from "./components/Question";
 import BoolQuestion from "./components/BoolQuestion";
 
-const HomeQuiz = () => {
+const HomeQuiz = ({ handleSubmit }) => {
   const [windows, setWindows] = React.useState(1);
   const [experience, setExperience] = React.useState(1);
   const [ux, setUx] = React.useState(1);
@@ -29,6 +29,7 @@ const HomeQuiz = () => {
       community,
     };
     console.log(quizState);
+    handleSubmit();
   };
 
   const handleWindowsChange = (value) => {

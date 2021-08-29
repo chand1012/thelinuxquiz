@@ -1,3 +1,5 @@
+import * as DistroIcons from "../../components/Icons";
+
 // this is where the ratings for each
 // distro will be stored
 // as well as a link to their sites
@@ -12,6 +14,7 @@ export const ubuntu = {
   games: true,
   windows: 5,
   url: "https://ubuntu.com/",
+  Icon: DistroIcons.UbuntuIcon,
 };
 
 export const debian = {
@@ -24,6 +27,7 @@ export const debian = {
   games: true,
   windows: 1,
   url: "https://www.debian.org/",
+  Icon: DistroIcons.DebianIcon,
 };
 
 export const fedora = {
@@ -36,6 +40,7 @@ export const fedora = {
   games: true,
   windows: 7,
   url: "https://fedoraproject.org/",
+  Icon: DistroIcons.FedoraIcon,
 };
 
 export const arch = {
@@ -48,6 +53,21 @@ export const arch = {
   games: true,
   windows: 1,
   url: "https://www.archlinux.org/",
+  Icon: DistroIcons.ArchIcon,
+};
+
+// manjaro ratings
+export const manjaro = {
+  security: 8,
+  stability: 8,
+  community: 9,
+  experience: 4,
+  privacy: 8,
+  ux: 8,
+  games: true,
+  windows: 4,
+  url: "https://manjaro.org/",
+  Icon: DistroIcons.ManjaroIcon,
 };
 
 export const popOS = {
@@ -60,6 +80,7 @@ export const popOS = {
   games: true,
   windows: 7,
   url: "https://www.popos.org/",
+  Icon: DistroIcons.PopIcon,
 };
 
 export const linuxMint = {
@@ -72,6 +93,7 @@ export const linuxMint = {
   games: true,
   windows: 10,
   url: "https://www.linuxmint.com/",
+  Icon: DistroIcons.LinuxMintIcon,
 };
 
 export const elementary = {
@@ -84,6 +106,7 @@ export const elementary = {
   games: true,
   windows: 3,
   url: "https://elementary.io/",
+  Icon: DistroIcons.ElementaryIcon,
 };
 
 export const zorin = {
@@ -96,6 +119,7 @@ export const zorin = {
   games: true,
   windows: 6,
   url: "https://zorin.com/os/",
+  Icon: DistroIcons.ZorinIcon,
 };
 
 export const linuxFromScratch = {
@@ -108,6 +132,7 @@ export const linuxFromScratch = {
   games: false, // this may change
   windows: 1,
   url: "https://www.linuxfromscratch.org/",
+  Icon: DistroIcons.LinuxIcon, // this will be the default icon
 };
 
 export const opensuse = {
@@ -120,6 +145,7 @@ export const opensuse = {
   games: true,
   windows: 1,
   url: "https://www.opensuse.org/",
+  Icon: DistroIcons.OpenSUSEIcon,
 };
 
 const linuxDistros = {

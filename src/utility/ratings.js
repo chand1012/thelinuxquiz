@@ -42,7 +42,7 @@ export const fedora = {
   games: true,
   windows: 7,
   displayName: "Fedora",
-  url: "https://fedoraproject.org/",
+  url: "https://getfedora.org/",
   Icon: DistroIcons.FedoraIcon,
 };
 
@@ -85,7 +85,7 @@ export const popOS = {
   games: true,
   windows: 7,
   displayName: "Pop!_OS",
-  url: "https://www.popos.org/",
+  url: "https://pop.system76.com/",
   Icon: DistroIcons.PopIcon,
 };
 

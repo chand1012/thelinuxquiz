@@ -17,7 +17,7 @@ const DistroGrid = () => {
 
   return (
     <Fieldset label="distros">
-      <Grid.Container gap={1} justify="flex-start">
+      <Grid.Container gap={2} justify="center">
         <GetAllDistroCards />
       </Grid.Container>
     </Fieldset>

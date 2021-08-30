@@ -1,4 +1,4 @@
-import { Fieldset } from "@geist-ui/react";
+import { Fieldset, Grid } from "@geist-ui/react";
 import React, { useState } from "react";
 
 import DistroGrid from "./DistroGrid";
@@ -24,17 +24,23 @@ const Quiz = () => {
   };
 
   return (
-    <Fieldset.Group value={fieldValue} onChange={handleFieldChange}>
-      <HomeQuiz handleSubmit={openModal} />
-      <WorkstationQuiz />
-      <ServerQuiz />
-      <DistroGrid />
-      <DistroModal
-        distro={"arch"}
-        closeModal={closeModal}
-        visible={isResultsOpen}
-      />
-    </Fieldset.Group>
+    <Grid.Container justify="center">
+      <Fieldset.Group
+        style={{ maxWidth: "75%" }}
+        value={fieldValue}
+        onChange={handleFieldChange}
+      >
+        <HomeQuiz handleSubmit={openModal} />
+        <WorkstationQuiz />
+        <ServerQuiz />
+        <DistroGrid />
+        <DistroModal
+          distro={"arch"}
+          closeModal={closeModal}
+          visible={isResultsOpen}
+        />
+      </Fieldset.Group>
+    </Grid.Container>
   );
 };
 

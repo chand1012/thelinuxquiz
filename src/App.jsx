@@ -8,6 +8,7 @@ import { Switch, Route, useHistory } from "react-router-dom";
 import Index from "./pages/Index";
 import Distros from "./pages/DistroPage";
 import About from "./pages/About";
+import NotFound from "./pages/404";
 
 function App() {
   const [themeType, setThemeType] = useState("dark");

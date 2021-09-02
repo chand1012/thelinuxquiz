@@ -1,13 +1,13 @@
 import { Fieldset, Grid } from "@geist-ui/react";
 import React, { useState } from "react";
 
-import DistroGrid from "./DistroGrid";
-import DistroModal from "./DistroModal";
-import HomeQuiz from "./quiz/Home";
-import ServerQuiz from "./quiz/Server";
-import WorkstationQuiz from "./quiz/Workstation";
+// import DistroGrid from "./DistroGrid";
+import DistroModal from "../components/DistroModal";
+import HomeQuiz from "../components/quiz/Home";
+import ServerQuiz from "../components/quiz/Server";
+import WorkstationQuiz from "../components/quiz/Workstation";
 
-const Quiz = () => {
+const Page = () => {
   const [fieldValue, setFieldValue] = useState("home");
   const [isResultsOpen, setResultsOpen] = useState(false);
 
@@ -25,15 +25,10 @@ const Quiz = () => {
 
   return (
     <Grid.Container justify="center">
-      <Fieldset.Group
-        style={{ maxWidth: "75%" }}
-        value={fieldValue}
-        onChange={handleFieldChange}
-      >
+      <Fieldset.Group value={fieldValue} onChange={handleFieldChange}>
         <HomeQuiz handleSubmit={openModal} />
         <WorkstationQuiz />
         <ServerQuiz />
-        <DistroGrid />
         <DistroModal
           distro={"arch"}
           closeModal={closeModal}
@@ -44,4 +39,4 @@ const Quiz = () => {
   );
 };
 
-export default Quiz;
+export default Page;

@@ -15,9 +15,18 @@ const DistroCard = ({ distro }) => {
       </Grid.Container>
 
       <Card.Footer>
-        <Link block href={SelectedDistro.url} target="_blank">
-          Download {SelectedDistro.displayName}
-        </Link>
+        <Grid.Container justify="center">
+          <Grid>
+            <Link
+              marginLeft={0.47} // needed this to center the text for some reason
+              block
+              href={SelectedDistro.url}
+              target="_blank"
+            >
+              Download {SelectedDistro.displayName}
+            </Link>
+          </Grid>
+        </Grid.Container>
       </Card.Footer>
     </Card>
   );

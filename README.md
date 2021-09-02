@@ -1,6 +1,6 @@
 # The Linux Quiz
 
-This is a website that @12ian3 and @chand1012 are developing to give Linux noobs and pros alike an easy online quiz to find their perfect distro! Currently the website is incomplete and doesn't work yet, but hopefully in the coming weeks we will have our first beta release!
+This is a website that [12ian3](https://github.com/12ian3) and [chand1012](https://github.com/chand1012) are developing to give Linux noobs and pros alike an easy online quiz to find their perfect distro! Currently the website is incomplete and doesn't work yet, but hopefully in the coming weeks we will have our first beta release!
 
 If you want to contribute to the project, fork us and submit a PR!
 

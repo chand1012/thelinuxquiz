@@ -1,13 +1,14 @@
 import React from "react";
 import { Card, Grid, Link, Text } from "@geist-ui/react";
 import * as Ratings from "../utility/ratings";
+import DistroIcon from "./DistroIcons";
 
 const DistroCard = ({ distro }) => {
   const SelectedDistro = Ratings[distro];
 
   return (
     <Card hoverable>
-      <SelectedDistro.Icon size={128} />
+      <DistroIcon name={distro} size={128} />
       <Grid.Container justify="center">
         <Grid>
           <Text h4>{SelectedDistro.displayName}</Text>

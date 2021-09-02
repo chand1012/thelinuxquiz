@@ -156,17 +156,35 @@ export const LinuxIcon = (props) => {
   return <img src={TuxIcon} alt="Tux" {...props} />;
 };
 
-export default {
-  UbuntuIcon,
-  DebianIcon,
-  FedoraIcon,
-  ArchIcon,
-  GentooIcon,
-  OpenSUSEIcon,
-  ManjaroIcon,
-  ZorinIcon,
-  MintIcon,
-  PopIcon,
-  ElementaryIcon,
-  LinuxIcon,
+export const Icon = (props) => {
+  const { name } = props;
+
+  switch (name) {
+    case "ubuntu":
+      return <UbuntuIcon {...props} />;
+    case "debian":
+      return <DebianIcon {...props} />;
+    case "fedora":
+      return <FedoraIcon {...props} />;
+    case "arch":
+      return <ArchIcon {...props} />;
+    case "gentoo":
+      return <GentooIcon {...props} />;
+    case "opensuse":
+      return <OpenSUSEIcon {...props} />;
+    case "manjaro":
+      return <ManjaroIcon {...props} />;
+    case "zorin":
+      return <ZorinIcon {...props} />;
+    case "linuxMint":
+      return <MintIcon {...props} />;
+    case "popOS":
+      return <PopIcon {...props} />;
+    case "elementary":
+      return <ElementaryIcon {...props} />;
+    default:
+      return <LinuxIcon {...props} />;
+  }
 };
+
+export default Icon;

@@ -1,5 +1,3 @@
-import * as DistroIcons from "../components/Icons";
-
 // this is where the ratings for each
 // distro will be stored
 // as well as a link to their sites
@@ -15,7 +13,6 @@ export const ubuntu = {
   windows: 5,
   displayName: "Ubuntu",
   url: "https://ubuntu.com/",
-  Icon: DistroIcons.UbuntuIcon,
 };
 
 export const debian = {
@@ -29,7 +26,6 @@ export const debian = {
   windows: 1,
   displayName: "Debian",
   url: "https://www.debian.org/",
-  Icon: DistroIcons.DebianIcon,
 };
 
 export const fedora = {
@@ -43,7 +39,6 @@ export const fedora = {
   windows: 7,
   displayName: "Fedora",
   url: "https://getfedora.org/",
-  Icon: DistroIcons.FedoraIcon,
 };
 
 export const arch = {
@@ -57,7 +52,6 @@ export const arch = {
   windows: 1,
   displayName: "Arch Linux",
   url: "https://www.archlinux.org/",
-  Icon: DistroIcons.ArchIcon,
 };
 
 // manjaro ratings
@@ -72,7 +66,6 @@ export const manjaro = {
   windows: 4,
   displayName: "Manjaro",
   url: "https://manjaro.org/",
-  Icon: DistroIcons.ManjaroIcon,
 };
 
 export const popOS = {
@@ -86,7 +79,6 @@ export const popOS = {
   windows: 7,
   displayName: "Pop!_OS",
   url: "https://pop.system76.com/",
-  Icon: DistroIcons.PopIcon,
 };
 
 export const linuxMint = {
@@ -100,7 +92,6 @@ export const linuxMint = {
   windows: 10,
   displayName: "Linux Mint",
   url: "https://www.linuxmint.com/",
-  Icon: DistroIcons.MintIcon,
 };
 
 export const elementary = {
@@ -114,7 +105,6 @@ export const elementary = {
   windows: 3,
   displayName: "Elementary OS",
   url: "https://elementary.io/",
-  Icon: DistroIcons.ElementaryIcon,
 };
 
 export const zorin = {
@@ -128,7 +118,6 @@ export const zorin = {
   windows: 6,
   displayName: "Zorin OS",
   url: "https://zorin.com/os/",
-  Icon: DistroIcons.ZorinIcon,
 };
 
 export const linuxFromScratch = {
@@ -142,7 +131,6 @@ export const linuxFromScratch = {
   windows: 1,
   displayName: "Linux From Scratch",
   url: "https://www.linuxfromscratch.org/",
-  Icon: DistroIcons.LinuxIcon, // this will be the default icon
 };
 
 export const opensuse = {
@@ -156,7 +144,6 @@ export const opensuse = {
   windows: 1,
   displayName: "openSUSE",
   url: "https://www.opensuse.org/",
-  Icon: DistroIcons.OpenSUSEIcon,
 };
 
 const linuxDistros = {

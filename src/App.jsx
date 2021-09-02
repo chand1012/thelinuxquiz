@@ -6,6 +6,7 @@ import { Grid, Tabs } from "@geist-ui/react";
 import Index from "./pages/Index";
 import Distros from "./pages/DistroPage";
 import About from "./pages/About";
+import NotFound from "./pages/404";
 
 function App() {
   const [themeType, setThemeType] = useState("dark");
@@ -26,7 +27,7 @@ function App() {
       case "about":
         return <About />;
       default:
-        return <Index />;
+        return <NotFound />;
     }
   };
 

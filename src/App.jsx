@@ -3,7 +3,7 @@ import NavBar from "./components/NavBar";
 import { GeistProvider, CssBaseline } from "@geist-ui/react";
 import { Grid, Tabs } from "@geist-ui/react";
 
-import { Switch, Route, useHistory } from "react-router-dom";
+import { Switch, Route, useHistory, useLocation } from "react-router-dom";
 
 import Index from "./pages/Index";
 import Distros from "./pages/DistroPage";
@@ -16,18 +16,20 @@ function App() {
     setThemeType((last) => (last === "dark" ? "light" : "dark"));
   };
   const history = useHistory();
+  const location = useLocation();
+
   return (
     <GeistProvider themeType={themeType}>
       <CssBaseline />
       <NavBar themeSwitcher={switchThemes} themeType={themeType}>
         <Tabs
           hideDivider
-          initialValue="/"
+          value={location.pathname}
           onChange={(value) => history.push(value)}
         >
           <Tabs.Item label={"home"} value={"/"} />
-          <Tabs.Item label={"distros"} value={"distros"} />
-          <Tabs.Item label={"about"} value={"about"} />
+          <Tabs.Item label={"distros"} value={"/distros"} />
+          <Tabs.Item label={"about"} value={"/about"} />
         </Tabs>
       </NavBar>
       <Grid.Container gap={2} justify="center">
@@ -42,9 +44,14 @@ function App() {
               <About />
             </Grid>
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Grid>
               <Index />
+            </Grid>
+          </Route>
+          <Route path="*">
+            <Grid>
+              <NotFound />
             </Grid>
           </Route>
         </Switch>

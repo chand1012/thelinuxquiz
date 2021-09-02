@@ -7,7 +7,7 @@ import DistroGrid from "../components/DistroGrid";
 const DistroPage = () => {
   return (
     <Grid.Container justify="center">
-      <Grid>
+      <Grid style={{ maxWidth: "80%" }}>
         <DistroGrid />
       </Grid>
     </Grid.Container>

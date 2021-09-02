@@ -32,6 +32,9 @@ function App() {
       </NavBar>
       <Grid.Container gap={2} justify="center">
         <Switch>
+          <Route path="/404">
+            <NotFound />
+          </Route>
           <Route path="/distros">
             <Grid>
               <Distros />

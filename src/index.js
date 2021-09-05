@@ -6,8 +6,6 @@ import reportWebVitals from "./reportWebVitals";
 
 import { BrowserRouter as Router } from "react-router-dom";
 
-// The theme will be switchable later
-
 ReactDOM.render(
   <React.StrictMode>
     <Router>

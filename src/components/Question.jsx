@@ -25,6 +25,7 @@ const Question = (props) => {
         <Divider y={0} />
         <Slider
           showMarkers
+          hideValue
           onChange={props.onChange}
           min={1}
           max={5}
@@ -52,6 +53,7 @@ const Question = (props) => {
       <Divider y={0} />
       <Slider
         showMarkers
+        hideValue
         onChange={props.onChange}
         min={1}
         max={5}

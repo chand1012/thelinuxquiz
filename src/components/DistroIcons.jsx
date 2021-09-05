@@ -100,7 +100,12 @@ export const ManjaroIcon = (props) => {
 export const ZorinIcon = (props) => {
   if (props.size) {
     return (
-      <img src={ZorinSVG} width={props.size} height={props.size} {...props} />
+      <img
+        src={ZorinSVG}
+        width={props.size}
+        height={props.size * 1.25}
+        {...props}
+      />
     );
   }
 
@@ -111,7 +116,12 @@ export const ZorinIcon = (props) => {
 export const MintIcon = (props) => {
   if (props.size) {
     return (
-      <img src={MintSVG} width={props.size} height={props.size} {...props} />
+      <img
+        src={MintSVG}
+        width={props.size}
+        height={props.size * 1.5}
+        {...props}
+      />
     );
   }
 

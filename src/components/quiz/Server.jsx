@@ -56,9 +56,7 @@ const ServerQuiz = () => {
       <Fieldset.Title>Server Use</Fieldset.Title>
       <Fieldset.Subtitle>
         <Text>
-          <h5>
-            WIP does not yet work! <br /> All scales are from 1 to 5.
-          </h5>
+          <h5>WIP does not yet work!</h5>
         </Text>
         <Grid.Container width="50rem" direction="column" gap={2}>
           <Grid>

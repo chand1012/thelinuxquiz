@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Fieldset, Grid, Text } from "@geist-ui/react";
+import { Button, Fieldset, Grid } from "@geist-ui/react";
 import Question from "./components/Question";
 import BoolQuestion from "./components/BoolQuestion";
 
@@ -94,9 +94,6 @@ const HomeQuiz = ({ handleSubmit }) => {
     <Fieldset label="desktop">
       <Fieldset.Title>Desktop Use</Fieldset.Title>
       <Fieldset.Subtitle>
-        <Text>
-          <h5>All scales are from 1 to 5.</h5>
-        </Text>
         <Grid.Container width="50rem" direction="column" gap={2}>
           <Grid>
             <Question tooltip={windowsTooltip} onChange={handleWindowsChange}>

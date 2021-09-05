@@ -1,5 +1,13 @@
 import React from "react";
-import { Card, Divider, Text, Tooltip, Slider } from "@geist-ui/react";
+import {
+  Card,
+  Divider,
+  Grid,
+  Text,
+  Tooltip,
+  Spacer,
+  Slider,
+} from "@geist-ui/react";
 import { QuestionCircle } from "@geist-ui/react-icons";
 
 const Question = (props) => {
@@ -16,13 +24,22 @@ const Question = (props) => {
         </Text>
         <Divider y={0} />
         <Slider
-          showMarkers
+          hideValue
           onChange={props.onChange}
           min={1}
           max={5}
-          step={1}
+          step={0.05}
           initialValue={1}
         />
+        <Spacer h={1} />
+        <Grid.Container justify="space-between">
+          <Grid>
+            <Text h6>Least</Text>
+          </Grid>
+          <Grid>
+            <Text h6>Most</Text>
+          </Grid>
+        </Grid.Container>
       </Card>
     );
   }
@@ -34,13 +51,22 @@ const Question = (props) => {
       </Text>
       <Divider y={0} />
       <Slider
-        showMarkers
+        hideValue
         onChange={props.onChange}
         min={1}
         max={5}
-        step={1}
+        step={0.05}
         initialValue={1}
       />
+      <Spacer h={1} />
+      <Grid.Container justify="space-between">
+        <Grid>
+          <Text h6>Least</Text>
+        </Grid>
+        <Grid>
+          <Text h6>Most</Text>
+        </Grid>
+      </Grid.Container>
     </Card>
   );
 };

@@ -19,7 +19,7 @@ const Question = (props) => {
           showMarkers
           onChange={props.onChange}
           min={1}
-          max={10}
+          max={5}
           step={1}
           initialValue={1}
         />
@@ -34,9 +34,10 @@ const Question = (props) => {
       </Text>
       <Divider y={0} />
       <Slider
+        showMarkers
         onChange={props.onChange}
         min={1}
-        max={10}
+        max={5}
         step={1}
         initialValue={1}
       />

@@ -1,15 +1,16 @@
 import { Fieldset, Grid } from "@geist-ui/react";
 import React, { useState } from "react";
 
-// import DistroGrid from "./DistroGrid";
+import distroCompare from "../utility/compare";
+
 import DistroModal from "../components/DistroModal";
 import HomeQuiz from "../components/quiz/Home";
 import ServerQuiz from "../components/quiz/Server";
-import WorkstationQuiz from "../components/quiz/Workstation";
 
 const Page = () => {
-  const [fieldValue, setFieldValue] = useState("home");
+  const [fieldValue, setFieldValue] = useState("desktop");
   const [isResultsOpen, setResultsOpen] = useState(false);
+  const [distro, setDistro] = useState("ubuntu");
 
   const handleFieldChange = (value) => {
     setFieldValue(value);
@@ -23,14 +24,19 @@ const Page = () => {
     setResultsOpen(false);
   };
 
+  const handleSubmit = (quizState) => {
+    const result = distroCompare(quizState);
+    setDistro(result);
+    openModal();
+  };
+
   return (
     <Grid.Container justify="center">
       <Fieldset.Group value={fieldValue} onChange={handleFieldChange}>
-        <HomeQuiz handleSubmit={openModal} />
-        <WorkstationQuiz />
+        <HomeQuiz handleSubmit={handleSubmit} />
         <ServerQuiz />
         <DistroModal
-          distro={"arch"}
+          distro={distro}
           closeModal={closeModal}
           visible={isResultsOpen}
         />

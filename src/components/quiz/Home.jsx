@@ -10,7 +10,7 @@ const HomeQuiz = ({ handleSubmit }) => {
   const [security, setSecurity] = React.useState(1);
   const [privacy, setPrivacy] = React.useState(1);
   const [stability, setStability] = React.useState(1);
-  const [gaming, setGaming] = React.useState(false);
+  const [gaming, setGaming] = React.useState(1);
   const [customize, setCustomize] = React.useState(1);
   const [install, setInstall] = React.useState(1);
   const [community, setCommunity] = React.useState(1);
@@ -28,8 +28,7 @@ const HomeQuiz = ({ handleSubmit }) => {
       install,
       community,
     };
-    console.log(quizState);
-    handleSubmit();
+    handleSubmit(quizState);
   };
 
   const handleWindowsChange = (value) => {
@@ -92,11 +91,11 @@ const HomeQuiz = ({ handleSubmit }) => {
     "This question pertains to things like the user forum for a particular operating system. 1 would be a system with no community features or help at all, and 10 would be a densely populated forum with almost any answer you need. ";
 
   return (
-    <Fieldset label="home">
-      <Fieldset.Title>Home Use</Fieldset.Title>
+    <Fieldset label="desktop">
+      <Fieldset.Title>Desktop Use</Fieldset.Title>
       <Fieldset.Subtitle>
         <Text>
-          <h5>All scales are from 1 to 10.</h5>
+          <h5>All scales are from 1 to 5.</h5>
         </Text>
         <Grid.Container width="50rem" direction="column" gap={2}>
           <Grid>

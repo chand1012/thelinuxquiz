@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Fieldset, Grid, Text } from "@geist-ui/react";
-import Question from "./components/Question";
+import Question from "../Question";
+
 const ServerQuiz = () => {
   const [windows, setWindows] = React.useState(1);
   const [experience, setExperience] = React.useState(1);

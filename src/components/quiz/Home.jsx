@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Fieldset, Grid } from "@geist-ui/react";
-import Question from "./components/Question";
-import BoolQuestion from "./components/BoolQuestion";
+import Question from "../Question";
+import BoolQuestion from "../QuestionBool";
 
 const HomeQuiz = ({ handleSubmit }) => {
   const [windows, setWindows] = React.useState(1);

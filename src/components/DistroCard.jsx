@@ -1,10 +1,11 @@
 import React from "react";
 import { Card, Grid, Link, Text } from "@geist-ui/react";
-import * as Ratings from "../utility/ratings";
+import { desktopLinuxDistros } from "../utility/ratings";
+
 import DistroIcon from "./DistroIcons";
 
 const DistroCard = ({ distro }) => {
-  const SelectedDistro = Ratings[distro];
+  const SelectedDistro = desktopLinuxDistros[distro];
 
   return (
     <Card hoverable>

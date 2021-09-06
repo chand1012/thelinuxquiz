@@ -20,11 +20,11 @@ that match are given the most points, then those which fall outside are given fe
 //   community,
 // };
 
-import * as DistroRatings from "./ratings";
+import { desktopLinuxDistros } from "./ratings";
 
 // this definitely could be better
 // outputs a string of the distro name
-const compareResults = (quizState) => {
+const compareResults = (quizState, DistroRatings = desktopLinuxDistros) => {
   const distroScores = {};
 
   // loop through each user score input.

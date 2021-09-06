@@ -184,7 +184,7 @@ export const fedora = {
   url: "https://getfedora.org/",
 };
 
-const linuxDistros = {
+export const desktopLinuxDistros = {
   ubuntu,
   debian,
   arch,
@@ -197,5 +197,3 @@ const linuxDistros = {
   fedora,
   opensuse,
 };
-
-export default linuxDistros;

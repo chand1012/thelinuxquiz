@@ -76,19 +76,19 @@ const HomeQuiz = ({ handleSubmit }) => {
   const linuxTooltip =
     "This question targets general Linux experience such as basic navigation, installing packages through the included store or command-line package manager, modifying settings, etc. It also covers basic knowledge about parts of the linux operating system such as what a desktop environment, terminal, or package is.";
   const uxTooltip =
-    "This question refers to how important the ease of use of your operating system. For example, MS-DOS (command-line only) would be a 2. An iPhone would be an 8 or 9.";
+    "This question refers to how important the ease of use of your operating system. For example, MS-DOS (command-line only) would be a 1, not very intuitive. An iPhone would be an 5.";
   const securityTooltip =
-    "This question pertains to the general security features of the operating system such as disk encryption, password managers, and virtualization. Your grandma's passwords would be a zero, and a 4096 character encryption key would be a 10.";
+    "This question pertains to the general security features of the operating system such as disk encryption, password managers, and virtualization. Your grandma's passwords would be a zero, and a 4096 character encryption key would be a 5.";
   const privacyTooltip =
-    "This question pertains to the general privacy features of the operating system such as telemetry, advertisement tracking, and disk encryption. Facebook would be a 1 and printer from 2004 would be a 10.";
+    "This question pertains to the general privacy features of the operating system such as telemetry, advertisement tracking, and disk encryption. Facebook would be a 1 and printer from 2004 would be a 5.";
   const stabilityTooltip =
-    "This question pertains to the general stability features of the operating system such as security updates and long term support. A 1 would be the most unstable, with 10 being a rock solid system.";
+    "This question pertains to the general stability features of the operating system such as security updates and long term support. A 1 would be the most unstable, with 5 being a rock solid system.";
   const customizeTooltip =
-    "This question pertains to the general customization features of the operating system such as themes, fonts, and language packs. A 1 would be the least customizable, with 10 being a fully custom system.";
+    "This question pertains to the general customization features of the operating system such as themes, fonts, and language packs. A 1 would be the least customizable, with 5 being a fully custom system.";
   const installTooltip =
-    "This question pertains to how easy the operating system is to install. 1 would mean its preinstalled, 10 would mean you custom compile from source and manually install the files yourself.";
+    "This question pertains to how easy the operating system is to install. 1 would mean its preinstalled, 5 would mean you custom compile from source and manually install the files yourself.";
   const communityTooltip =
-    "This question pertains to things like the user forum for a particular operating system. 1 would be a system with no community features or help at all, and 10 would be a densely populated forum with almost any answer you need. ";
+    "This question pertains to things like the user forum for a particular operating system. 1 would be a system with no community features or help at all, and 5 would be a densely populated forum with almost any answer you need. ";
 
   return (
     <Fieldset label="desktop">

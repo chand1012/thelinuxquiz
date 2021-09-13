@@ -10,7 +10,10 @@ import ZorinSVG from "../svg/Zorin.svg";
 import MintSVG from "../svg/Mint.svg";
 import PopSVG from "../svg/Pop.svg";
 import ElementarySVG from "../svg/Elementary.svg";
-import TuxIcon from "../svg/Linux.svg";
+import TuxSVG from "../svg/Linux.svg";
+import RockySVG from "../svg/RockyLinux.svg";
+import MXLinuxSVG from "../svg/MXLinux.svg";
+import RedHatSVG from "../svg/Redhat.svg";
 
 // more will need to be added as we go
 
@@ -159,11 +162,44 @@ export const ElementaryIcon = (props) => {
 export const LinuxIcon = (props) => {
   if (props.size) {
     return (
-      <img src={TuxIcon} width={props.size} height={props.size} {...props} />
+      <img src={TuxSVG} width={props.size} height={props.size} {...props} />
     );
   }
 
-  return <img src={TuxIcon} alt="Tux" {...props} />;
+  return <img src={TuxSVG} alt="Tux" {...props} />;
+};
+
+// rocky icon
+export const RockyLinuxIcon = (props) => {
+  if (props.size) {
+    return (
+      <img src={RockySVG} width={props.size} height={props.size} {...props} />
+    );
+  }
+
+  return <img src={RockySVG} alt="Rocky Linux" {...props} />;
+};
+
+// mxlinux icon
+export const MXLinuxIcon = (props) => {
+  if (props.size) {
+    return (
+      <img src={MXLinuxSVG} width={props.size} height={props.size} {...props} />
+    );
+  }
+
+  return <img src={MXLinuxSVG} alt="MX Linux" {...props} />;
+};
+
+// redhat icon
+export const RHELIcon = (props) => {
+  if (props.size) {
+    return (
+      <img src={RedHatSVG} width={props.size} height={props.size} {...props} />
+    );
+  }
+
+  return <img src={RedHatSVG} alt="Red Hat" {...props} />;
 };
 
 export const Icon = (props) => {
@@ -192,6 +228,12 @@ export const Icon = (props) => {
       return <PopIcon {...props} />;
     case "elementary":
       return <ElementaryIcon {...props} />;
+    case "rocky":
+      return <RockyLinuxIcon {...props} />;
+    case "mx":
+      return <MXLinuxIcon {...props} />;
+    case "rhel":
+      return <RHELIcon {...props} />;
     default:
       return <LinuxIcon {...props} />;
   }

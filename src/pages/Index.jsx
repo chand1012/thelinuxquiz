@@ -2,6 +2,7 @@ import { Fieldset, Grid } from "@geist-ui/react";
 import React, { useState } from "react";
 
 import distroCompare from "../utility/compare";
+import { desktopLinuxDistros, serverLinuxDistros } from "../utility/ratings";
 
 import DistroModal from "../components/DistroModal";
 import HomeQuiz from "../components/quiz/Home";
@@ -25,7 +26,12 @@ const Page = () => {
   };
 
   const handleSubmit = (quizState) => {
-    const result = distroCompare(quizState);
+    const distroSets = {
+      desktop: desktopLinuxDistros,
+      server: serverLinuxDistros,
+    };
+
+    const result = distroCompare(quizState, distroSets[fieldValue]);
     setDistro(result);
     openModal();
   };
@@ -34,7 +40,7 @@ const Page = () => {
     <Grid.Container justify="center">
       <Fieldset.Group value={fieldValue} onChange={handleFieldChange}>
         <HomeQuiz handleSubmit={handleSubmit} />
-        <ServerQuiz />
+        <ServerQuiz handleSubmit={handleSubmit} />
         <DistroModal
           distro={distro}
           closeModal={closeModal}

@@ -1,15 +1,15 @@
-import React from "react";
-import { Button, Fieldset, Grid, Text } from "@geist-ui/react";
+import React, { useState } from "react";
+import { Button, Fieldset, Grid } from "@geist-ui/react";
 import Question from "../Question";
 
-const ServerQuiz = () => {
-  const [windows, setWindows] = React.useState(1);
-  const [experience, setExperience] = React.useState(1);
-  const [security, setSecurity] = React.useState(1);
-  const [privacy, setPrivacy] = React.useState(1);
-  const [stability, setStability] = React.useState(1);
-  const [install, setInstall] = React.useState(1);
-  const [community, setCommunity] = React.useState(1);
+const ServerQuiz = ({ handleSubmit }) => {
+  const [windows, setWindows] = useState(1);
+  const [experience, setExperience] = useState(1);
+  const [security, setSecurity] = useState(1);
+  const [privacy, setPrivacy] = useState(1);
+  const [stability, setStability] = useState(1);
+  const [install, setInstall] = useState(1);
+  const [community, setCommunity] = useState(1);
 
   const submit = () => {
     const quizState = {
@@ -21,7 +21,7 @@ const ServerQuiz = () => {
       install,
       community,
     };
-    console.log(quizState);
+    handleSubmit(quizState);
   };
 
   const handleWindowsChange = (value) => {
@@ -56,9 +56,6 @@ const ServerQuiz = () => {
     <Fieldset label="server">
       <Fieldset.Title>Server Use</Fieldset.Title>
       <Fieldset.Subtitle>
-        <Text>
-          <h5>WIP does not yet work!</h5>
-        </Text>
         <Grid.Container width="50rem" direction="column" gap={2}>
           <Grid>
             <Question onChange={handleWindowsChange}>

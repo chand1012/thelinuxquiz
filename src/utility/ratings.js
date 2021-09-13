@@ -32,6 +32,21 @@ export const debian = {
   url: "https://www.debian.org/",
 };
 
+export const mx = {
+  security: 4,
+  stability: 3,
+  community: 4,
+  experience: 3,
+  privacy: 3,
+  customize: 4,
+  install: 2,
+  ux: 3,
+  games: 1,
+  windows: 2,
+  displayName: "MX Linux",
+  url: "https://mxlinux.org/",
+};
+
 export const arch = {
   security: 4,
   stability: 2,
@@ -184,6 +199,37 @@ export const fedora = {
   url: "https://getfedora.org/",
 };
 
+// rocky linux
+export const rocky = {
+  security: 4,
+  stability: 5,
+  community: 3,
+  experience: 4,
+  privacy: 3,
+  customize: 2,
+  install: 2,
+  windows: 2,
+  games: 0,
+  ux: 2,
+  displayName: "Rocky Linux",
+  url: "https://rockylinux.org/",
+};
+
+const rhel = {
+  security: 4,
+  stability: 5,
+  community: 2,
+  experience: 4,
+  privacy: 3,
+  customize: 1,
+  install: 2,
+  ux: 2,
+  games: 0,
+  windows: 1,
+  displayName: "Red Hat Enterprise Linux",
+  url: "https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux",
+};
+
 export const desktopLinuxDistros = {
   ubuntu,
   debian,
@@ -196,4 +242,19 @@ export const desktopLinuxDistros = {
   gentoo,
   fedora,
   opensuse,
+  mx,
+};
+
+export const serverLinuxDistros = {
+  rocky,
+  ubuntu,
+  debian,
+  fedora,
+  opensuse,
+  rhel,
+};
+
+export const allLinuxDistros = {
+  ...desktopLinuxDistros,
+  ...serverLinuxDistros,
 };

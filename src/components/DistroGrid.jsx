@@ -2,11 +2,11 @@ import React from "react";
 import { Fieldset, Grid } from "@geist-ui/react";
 
 import DistroCard from "./DistroCard";
-import { desktopLinuxDistros } from "../utility/ratings";
+import { allLinuxDistros } from "../utility/ratings";
 
 const DistroGrid = () => {
   const GetAllDistroCards = () => {
-    return Object.keys(desktopLinuxDistros).map((key) => {
+    return Object.keys(allLinuxDistros).map((key) => {
       return (
         <Grid key={key}>
           <DistroCard distro={key} />

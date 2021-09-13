@@ -1,19 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Fieldset, Grid } from "@geist-ui/react";
 import Question from "../Question";
 import BoolQuestion from "../QuestionBool";
 
 const HomeQuiz = ({ handleSubmit }) => {
-  const [windows, setWindows] = React.useState(1);
-  const [experience, setExperience] = React.useState(1);
-  const [ux, setUx] = React.useState(1);
-  const [security, setSecurity] = React.useState(1);
-  const [privacy, setPrivacy] = React.useState(1);
-  const [stability, setStability] = React.useState(1);
-  const [gaming, setGaming] = React.useState(1);
-  const [customize, setCustomize] = React.useState(1);
-  const [install, setInstall] = React.useState(1);
-  const [community, setCommunity] = React.useState(1);
+  const [windows, setWindows] = useState(1);
+  const [experience, setExperience] = useState(1);
+  const [ux, setUx] = useState(1);
+  const [security, setSecurity] = useState(1);
+  const [privacy, setPrivacy] = useState(1);
+  const [stability, setStability] = useState(1);
+  const [gaming, setGaming] = useState(1);
+  const [customize, setCustomize] = useState(1);
+  const [install, setInstall] = useState(1);
+  const [community, setCommunity] = useState(1);
 
   const submit = () => {
     const quizState = {

@@ -1,5 +1,13 @@
 import React from "react";
-import { Button, Divider, Grid, Link, Tooltip, Spacer } from "@geist-ui/react";
+import {
+  Button,
+  Divider,
+  Grid,
+  Link,
+  Text,
+  Tooltip,
+  Spacer,
+} from "@geist-ui/react";
 import { Moon, Sun, Github } from "@geist-ui/react-icons";
 
 // the links are not centered
@@ -12,9 +20,7 @@ const NavBar = ({ children, themeSwitcher, themeType }) => (
       <Grid.Container justify="space-between">
         <Grid>
           <Link>
-            <Button hoverable>
-              <h4> The Linux Quiz </h4>
-            </Button>
+            <Text h4> The Linux Quiz </Text>
           </Link>
         </Grid>
         <Grid>{children}</Grid>

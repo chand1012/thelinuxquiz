@@ -10,10 +10,11 @@ const HomeQuiz = ({ handleSubmit }) => {
   const [security, setSecurity] = useState(1);
   const [privacy, setPrivacy] = useState(1);
   const [stability, setStability] = useState(1);
-  const [gaming, setGaming] = useState(1);
+  const [gaming, setGaming] = useState(0);
   const [customize, setCustomize] = useState(1);
   const [install, setInstall] = useState(1);
   const [community, setCommunity] = useState(1);
+  const [feedback, setFeedback] = useState(1);
 
   const submit = () => {
     const quizState = {
@@ -29,6 +30,9 @@ const HomeQuiz = ({ handleSubmit }) => {
       community,
     };
     handleSubmit(quizState);
+    if (feedback) {
+      console.log("Send the information!");
+    }
   };
 
   const handleWindowsChange = (value) => {
@@ -71,6 +75,10 @@ const HomeQuiz = ({ handleSubmit }) => {
     setCommunity(value);
   };
 
+  const handleFeedbackChange = (value) => {
+    setFeedback(value);
+  };
+
   const windowsTooltip =
     "This question specifically refers to general functions such as creating/deleting files, modifying settings, and competent use of the Windows operating system.";
   const linuxTooltip =
@@ -89,6 +97,8 @@ const HomeQuiz = ({ handleSubmit }) => {
     "This question pertains to how easy the operating system is to install. 1 would mean its preinstalled, 5 would mean you custom compile from source and manually install the files yourself.";
   const communityTooltip =
     "This question pertains to things like the user forum for a particular operating system. 1 would be a system with no community features or help at all, and 5 would be a densely populated forum with almost any answer you need. ";
+  const feedbackTooltip =
+    "This information is completely public and available at our public API. No user identifiable information is publicly available.";
 
   return (
     <Fieldset label="desktop">
@@ -150,8 +160,17 @@ const HomeQuiz = ({ handleSubmit }) => {
             </Question>
           </Grid>
           <Grid>
-            <BoolQuestion onChange={handleGamingChange}>
+            <BoolQuestion value={gaming} onChange={handleGamingChange}>
               Do you use your computer for gaming?
+            </BoolQuestion>
+          </Grid>
+          <Grid>
+            <BoolQuestion
+              onChange={handleFeedbackChange}
+              value={feedback}
+              tooltip={feedbackTooltip}
+            >
+              Would you like to participate in our anonymous feedback survey?
             </BoolQuestion>
           </Grid>
         </Grid.Container>

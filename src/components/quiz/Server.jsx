@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Fieldset, Grid } from "@geist-ui/react";
 import Question from "../Question";
+import BoolQuestion from "../QuestionBool";
 
 const ServerQuiz = ({ handleSubmit }) => {
   const [windows, setWindows] = useState(1);
@@ -10,6 +11,7 @@ const ServerQuiz = ({ handleSubmit }) => {
   const [stability, setStability] = useState(1);
   const [install, setInstall] = useState(1);
   const [community, setCommunity] = useState(1);
+  const [feedback, setFeedback] = useState(1);
 
   const submit = () => {
     const quizState = {
@@ -22,6 +24,9 @@ const ServerQuiz = ({ handleSubmit }) => {
       community,
     };
     handleSubmit(quizState);
+    if (feedback) {
+      console.log("Send the information!");
+    }
   };
 
   const handleWindowsChange = (value) => {
@@ -51,6 +56,13 @@ const ServerQuiz = ({ handleSubmit }) => {
   const handleCommunityChange = (value) => {
     setCommunity(value);
   };
+
+  const handleFeedbackChange = (value) => {
+    setFeedback(value);
+  };
+
+  const feedbackTooltip =
+    "This information is completely public and available at our public API. No user identifiable information is publicly available.";
 
   return (
     <Fieldset label="server">
@@ -91,6 +103,15 @@ const ServerQuiz = ({ handleSubmit }) => {
             <Question onChange={handleCommunityChange}>
               How important is a large community of similar users to you?
             </Question>
+          </Grid>
+          <Grid>
+            <BoolQuestion
+              onChange={handleFeedbackChange}
+              value={feedback}
+              tooltip={feedbackTooltip}
+            >
+              Would you like to participate in our anonymous feedback survey?
+            </BoolQuestion>
           </Grid>
         </Grid.Container>
       </Fieldset.Subtitle>

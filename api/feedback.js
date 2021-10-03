@@ -50,7 +50,7 @@ export default async (req, res) => {
     $set: {
       hashIP,
       version,
-      data,
+      ...data,
     },
   };
 

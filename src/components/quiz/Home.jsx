@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, Fieldset, Grid } from "@geist-ui/react";
 import Question from "../Question";
 import BoolQuestion from "../QuestionBool";
+import postFeedback from "../../services/feedback";
 
 const HomeQuiz = ({ handleSubmit }) => {
   const [windows, setWindows] = useState(1);
@@ -16,7 +17,7 @@ const HomeQuiz = ({ handleSubmit }) => {
   const [community, setCommunity] = useState(1);
   const [feedback, setFeedback] = useState(1);
 
-  const submit = () => {
+  const submit = async () => {
     const quizState = {
       windows,
       experience,
@@ -31,7 +32,8 @@ const HomeQuiz = ({ handleSubmit }) => {
     };
     handleSubmit(quizState);
     if (feedback) {
-      console.log("Send the information!");
+      const response = await postFeedback(quizState, "home");
+      console.log(response);
     }
   };
 

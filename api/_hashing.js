@@ -1,18 +1,11 @@
-import bcrypt from "bcrypt";
+import md5 from "md5";
 
 // these are to simplify the process of hashing and comparing passwords
 
-const saltRounds = 10;
-
 const hash = (password) => {
-  return bcrypt.hash(password, saltRounds);
-};
-
-const compare = (password, hash) => {
-  return bcrypt.compare(password, hash);
+  return md5(password);
 };
 
 export default {
   hash,
-  compare,
 };

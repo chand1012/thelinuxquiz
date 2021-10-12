@@ -8,6 +8,7 @@ import { Switch, Route, useHistory, useLocation } from "react-router-dom";
 import Index from "./pages/Index";
 import Distros from "./pages/DistroPage";
 import About from "./pages/About";
+import Stats from "./pages/Stats";
 import NotFound from "./pages/404";
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Tabs.Item label={"home"} value={"/"} />
           <Tabs.Item label={"distros"} value={"/distros"} />
           <Tabs.Item label={"about"} value={"/about"} />
+          <Tabs.Item label={"stats"} value={"/stats"} />
         </Tabs>
       </NavBar>
       <Grid.Container gap={2} justify="center">
@@ -42,6 +44,11 @@ function App() {
           <Route path="/about">
             <Grid>
               <About />
+            </Grid>
+          </Route>
+          <Route path="/stats">
+            <Grid>
+              <Stats />
             </Grid>
           </Route>
           <Route exact path="/">

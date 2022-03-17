@@ -7,7 +7,7 @@ const BoolQuestion = (props) => (
       <h4>{props.children}</h4>
     </Text>
     <Divider y={0} />
-    <Radio.Group onChange={props.onChange}>
+    <Radio.Group value={props.value} onChange={props.onChange}>
       <Radio value={1}>Yes</Radio>
       <Radio value={0}>No</Radio>
     </Radio.Group>

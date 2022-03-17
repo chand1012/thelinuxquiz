@@ -27,6 +27,7 @@ const Question = (props) => {
           showMarkers
           hideValue
           onChange={props.onChange}
+          value={props.value}
           min={1}
           max={5}
           step={1}

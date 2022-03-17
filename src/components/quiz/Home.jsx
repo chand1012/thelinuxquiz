@@ -31,44 +31,18 @@ const HomeQuiz = ({ handleSubmit }) => {
     handleSubmit(quizState);
   };
 
-  const handleWindowsChange = (value) => {
-    setWindows(value);
-  };
-
-  const handleExperienceChange = (value) => {
-    setExperience(value);
-  };
-
-  const handleUXChange = (value) => {
-    setUx(value);
-  };
-
-  const handleSecurityChange = (value) => {
-    setSecurity(value);
-  };
-
-  const handlePrivacyChange = (value) => {
-    setPrivacy(value);
-  };
-
-  const handleStabilityChange = (value) => {
-    setStability(value);
-  };
-
-  const handleGamingChange = (value) => {
-    setGaming(value);
-  };
-
-  const handleCustomizeChange = (value) => {
-    setCustomize(value);
-  };
-
-  const handleInstallChange = (value) => {
-    setInstall(value);
-  };
-
-  const handleCommunityChange = (value) => {
-    setCommunity(value);
+  const reset = () => {
+    console.log("reset");
+    setWindows(1);
+    setExperience(1);
+    setUx(1);
+    setSecurity(1);
+    setPrivacy(1);
+    setStability(1);
+    setGaming(1);
+    setCustomize(1);
+    setInstall(1);
+    setCommunity(1);
   };
 
   const windowsTooltip =
@@ -96,34 +70,35 @@ const HomeQuiz = ({ handleSubmit }) => {
       <Fieldset.Subtitle>
         <Grid.Container width="50rem" direction="column" gap={2}>
           <Grid>
-            <Question tooltip={windowsTooltip} onChange={handleWindowsChange}>
+            <Question tooltip={windowsTooltip} value={windows} onChange={setWindows}>
               How experienced are you with Microsoft&#39;s Windows?
             </Question>
           </Grid>
           <Grid>
-            <Question tooltip={linuxTooltip} onChange={handleExperienceChange}>
+            <Question tooltip={linuxTooltip} value={experience} onChange={setExperience}>
               How experienced are you with Linux?
             </Question>
           </Grid>
           <Grid>
-            <Question tooltip={uxTooltip} onChange={handleUXChange}>
+            <Question tooltip={uxTooltip} value={ux} onChange={setUx}>
               How important is user experience to you?
             </Question>
           </Grid>
           <Grid>
-            <Question tooltip={securityTooltip} onChange={handleSecurityChange}>
+            <Question tooltip={securityTooltip} value={security} onChange={setSecurity}>
               How important is security to you?
             </Question>
           </Grid>
           <Grid>
-            <Question tooltip={privacyTooltip} onChange={handlePrivacyChange}>
+            <Question tooltip={privacyTooltip} value={privacy} onChange={setPrivacy}>
               How important is privacy to you?
             </Question>
           </Grid>
           <Grid>
             <Question
               tooltip={stabilityTooltip}
-              onChange={handleStabilityChange}
+              value={stability}
+              onChange={setStability}
             >
               How important is stability to you?
             </Question>
@@ -131,26 +106,28 @@ const HomeQuiz = ({ handleSubmit }) => {
           <Grid>
             <Question
               tooltip={customizeTooltip}
-              onChange={handleCustomizeChange}
+              value={customize}
+              onChange={setCustomize}
             >
               How important is customizability to you?
             </Question>
           </Grid>
           <Grid>
-            <Question tooltip={installTooltip} onChange={handleInstallChange}>
+            <Question tooltip={installTooltip} value={install} onChange={setInstall}>
               How important is ease of installation to you?
             </Question>
           </Grid>
           <Grid>
             <Question
               tooltip={communityTooltip}
-              onChange={handleCommunityChange}
+              value={community}
+              onChange={setCommunity}
             >
               How important is a large community of similar users to you?
             </Question>
           </Grid>
           <Grid>
-            <BoolQuestion onChange={handleGamingChange}>
+            <BoolQuestion value={gaming} onChange={setGaming}>
               Do you use your computer for gaming?
             </BoolQuestion>
           </Grid>
@@ -158,8 +135,11 @@ const HomeQuiz = ({ handleSubmit }) => {
       </Fieldset.Subtitle>
       <Fieldset.Footer>
         Submit The Quiz
-        <Button auto onClick={submit}>
+        <Button auto ghost onClick={submit}>
           Submit
+        </Button>
+        <Button auto ghost type="error" onClick={reset}>
+          Reset
         </Button>
       </Fieldset.Footer>
     </Fieldset>

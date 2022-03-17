@@ -70,12 +70,20 @@ const HomeQuiz = ({ handleSubmit }) => {
       <Fieldset.Subtitle>
         <Grid.Container width="50rem" direction="column" gap={2}>
           <Grid>
-            <Question tooltip={windowsTooltip} value={windows} onChange={setWindows}>
+            <Question
+              tooltip={windowsTooltip}
+              value={windows}
+              onChange={setWindows}
+            >
               How experienced are you with Microsoft&#39;s Windows?
             </Question>
           </Grid>
           <Grid>
-            <Question tooltip={linuxTooltip} value={experience} onChange={setExperience}>
+            <Question
+              tooltip={linuxTooltip}
+              value={experience}
+              onChange={setExperience}
+            >
               How experienced are you with Linux?
             </Question>
           </Grid>
@@ -85,12 +93,20 @@ const HomeQuiz = ({ handleSubmit }) => {
             </Question>
           </Grid>
           <Grid>
-            <Question tooltip={securityTooltip} value={security} onChange={setSecurity}>
+            <Question
+              tooltip={securityTooltip}
+              value={security}
+              onChange={setSecurity}
+            >
               How important is security to you?
             </Question>
           </Grid>
           <Grid>
-            <Question tooltip={privacyTooltip} value={privacy} onChange={setPrivacy}>
+            <Question
+              tooltip={privacyTooltip}
+              value={privacy}
+              onChange={setPrivacy}
+            >
               How important is privacy to you?
             </Question>
           </Grid>
@@ -113,7 +129,11 @@ const HomeQuiz = ({ handleSubmit }) => {
             </Question>
           </Grid>
           <Grid>
-            <Question tooltip={installTooltip} value={install} onChange={setInstall}>
+            <Question
+              tooltip={installTooltip}
+              value={install}
+              onChange={setInstall}
+            >
               How important is ease of installation to you?
             </Question>
           </Grid>
